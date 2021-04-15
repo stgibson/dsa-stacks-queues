@@ -1,0 +1,15 @@
+browser:
+    stack1 = empty stack
+    stack2 = empty stack
+
+    While browser is open:
+        If user navigates to page:
+            stack1.push(page)
+        If user goes back a page:
+            page = stack1.pop()
+            stack2.push(page)
+            Send user to page
+        If user goes forward a page:
+            page = stack2.pop()
+            stack1.push(page)
+            Send user to page
